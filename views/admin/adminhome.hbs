@@ -1,0 +1,27 @@
+<section class="mt-5">
+    <div class="container">
+        <div class="">
+            <a href="/admin/addUser" class="btn btn-success ps-auto">Add User</a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each users}}
+                <tr>
+                    <td>{{this.Name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.password}}</td>
+                    <td><a href="/admin/edit-user/{{this._id}}" class="btn btn-info">Edit</a></td>
+                    <td><a href="/admin/delete-user/{{this._id}}" class="btn btn-danger">Delete</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
